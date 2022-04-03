@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CoinDetailInfoActivity">
+
+
+
+    <ImageView
+        android:id="@+id/iv_coin"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_separate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" / "
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gl_head"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_coin" />
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="4dp"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_separate"
+        app:layout_constraintEnd_toStartOf="@+id/tv_separate"
+        app:layout_constraintTop_toTopOf="@+id/tv_separate"
+        tools:text="BTC" />
+
+    <TextView
+        android:id="@+id/tv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:text="UDS"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_separate"
+        app:layout_constraintStart_toEndOf="@+id/tv_separate"
+        app:layout_constraintTop_toTopOf="@+id/tv_separate" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Price"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_head" />
+
+    <TextView
+        android:id="@+id/tv_current_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="7532.123"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_price"
+        app:layout_constraintTop_toTopOf="@+id/tv_price" />
+
+    <TextView
+        android:id="@+id/tv_day_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Day minimum"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_price"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+    <TextView
+        android:id="@+id/tv_current_day_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="0.0001"
+        android:textSize="24sp"
+        android:textColor="@color/red"
+        app:layout_constraintStart_toEndOf="@+id/tv_day_min"
+        app:layout_constraintTop_toTopOf="@+id/tv_day_min" />
+
+    <TextView
+        android:id="@+id/tv_day_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Day maximum"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_day_min"
+        app:layout_constraintTop_toBottomOf="@+id/tv_day_min" />
+
+    <TextView
+        android:id="@+id/tv_current_day_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="999999"
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_day_max"
+        app:layout_constraintTop_toTopOf="@+id/tv_day_max" />
+
+    <TextView
+        android:id="@+id/tv_last_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Last transaction"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_day_max"
+        app:layout_constraintTop_toBottomOf="@+id/tv_day_max" />
+
+    <TextView
+        android:id="@+id/tv_current_last_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Bitfinex"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_last_transaction"
+        app:layout_constraintTop_toTopOf="@+id/tv_last_transaction" />
+
+    <TextView
+        android:id="@+id/tv_last_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Last update"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_last_transaction"
+        app:layout_constraintTop_toBottomOf="@+id/tv_last_transaction" />
+
+    <TextView
+        android:id="@+id/tv_current_last_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="21:45:01"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_last_update"
+        app:layout_constraintTop_toTopOf="@+id/tv_last_update" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyKotlinApplication</string>
+    <string name="rv_symbols">%s / %s</string>
+    <string name="rv_last_update">Last update: %s</string>
+</resources>
